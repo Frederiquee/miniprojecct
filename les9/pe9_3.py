@@ -1,14 +1,10 @@
 import csv
 
-try:
-    with open('gamers.csv', 'r'):
-        infile = open('gamers.csv', 'r')
-        regels = infile.readlines()
-        infile.close()
+def gamers():
+    with open('gamers.csv', 'r') as MyCSVFile:
+        reader = csv.reader(MyCSVFile, delimiter=';')
 
+        for row in reader:
+            print("De hoogste score is: {} behaald door {} op {}".format(row[2], row[0], row[1]))
 
-
-
-    for row in reader:
-        if hoogste_score < ints(row[2]):
-            hoogste_score
+gamers()

@@ -1,14 +1,11 @@
-old_password = ("Appelboom1")
-    if new_password => 6:
-
-def f(new_password):
-    if new_pass >= 16:
-        print("True")
+def new_password():
+    old_password = input('Voer oud wachtwoord in: ')
+    new_password = input('Voer een nieuw wachtwoord in: ')
+    if new_password >= str(6):
+        print('Uw wachtwoord voldoet aan de eis dat het meer dan 6 tekens bevat!')
+        if new_password != old_password:
+            print('Uw nieuwe wachtwoord is ingesteld!')
     else:
-        print("False")
+        print('Uw nieuwe wachtwoord voldoet niet aan de eisen!')
 
-new_pass = (input("Vul je nieuwe wachtwoord in:"))
-print(f(new_password=" "))
-
-old_password != new_password
-
+new_password()
